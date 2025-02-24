@@ -34,6 +34,7 @@ async function run(text) {
 
   const result = await chatSession.sendMessage(text);
   console.log(result.response.text());
+  return result.response.text();
 }
 app.use(express.json());
 app.use(
