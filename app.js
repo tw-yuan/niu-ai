@@ -1,8 +1,8 @@
 const https = require("https");
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 3000;
-const TOKEN = process.env.LINE_ACCESS_TOKEN;
+const PORT = 3001;
+const TOKEN = "yWT9DrE6vngujYX5Du/fqxIo3yzubvOwOJf68p5gH9Vk7SUY1AhXMank03hxD009qPaLgApo8+iyEXZuexkqWN6ViWGTZ/jBJACzLdJ347vWpvS4XTUbCa082NPrls1icBftFUW4eta7TavSIr+KbAdB04t89/1O/w1cDnyilFU=";
 
 app.use(express.json());
 app.use(
