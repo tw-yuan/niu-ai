@@ -47,15 +47,16 @@ app.get("/", (req, res) => {
   res.sendStatus(200);
 });
 
-app.post("/webhook", function (req, res) {
+app.post("/webhook", async function (req, res) {
     res.send("HTTP POST request sent to the webhook URL!");
+    const replY_text = await run(req.body.events[0].message.text)
     if (req.body.events[0].type === "message") {
       const dataString = JSON.stringify({
         replyToken: req.body.events[0].replyToken,
         messages: [
           {
             type: "text",
-            text: run(req.body.events[0].message.text),
+            text: replY_text,
           }
         ],
       });
